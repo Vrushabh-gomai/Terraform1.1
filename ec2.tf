@@ -1,17 +1,17 @@
-terraform {
+# terraform {
   
-}
+# }
 
-provider "aws" {
-  region = "ap-south-1"
+# provider "aws" {
+#   region = "ap-south-1"
 
-  shared_config_files = ["/home/ubuntu/.aws/conf"]
-  shared_credentials_files = ["/home/ubuntu/.aws/creds"]
-}
+#   shared_config_files = ["/home/ubuntu/.aws/conf"]
+#   shared_credentials_files = ["/home/ubuntu/.aws/creds"]
+# }
 
-resource "aws_instance" "vru" {
-    ami = "ami-007020fd9c84e18c7"
-    instance_type = "t2.micro"
-    key_name = "key1"
+# resource "aws_instance" "vru" {
+#     ami = "ami-007020fd9c84e18c7"
+#     instance_type = "t2.micro"
+#     key_name = "key1"
   
-}
+# }
