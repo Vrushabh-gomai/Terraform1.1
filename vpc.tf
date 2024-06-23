@@ -18,7 +18,7 @@ resource "aws_vpc" "main" {
 #   availability_zone = "us-east-1a"
 
 
-}
+# }
 
 
 resource "aws_internet_gateway" "main" {
