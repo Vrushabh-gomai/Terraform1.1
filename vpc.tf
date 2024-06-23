@@ -1,15 +1,15 @@
-provider "aws" {
-  alias  = "primary"
-  region = "us-east-1"
-}
+# provider "aws" {
+#   alias  = "primary"
+#   region = "us-east-1"
+# }
 
-resource "aws_vpc" "main" {
-  cidr_block = "10.0.0.0/16"
+# resource "aws_vpc" "main" {
+#   cidr_block = "10.0.0.0/16"
 
-  tags = {
-    Name = "main-vpc"
-  }
-}
+#   tags = {
+#     Name = "main-vpc"
+#   }
+# }
 
 
 # resource "aws_subnet" "main" {
@@ -21,28 +21,28 @@ resource "aws_vpc" "main" {
 # }
 
 
-resource "aws_internet_gateway" "main" {
-  vpc_id = aws_vpc.main.id
+# resource "aws_internet_gateway" "main" {
+#   vpc_id = aws_vpc.main.id
 
-  tags = {
-    Name = "main-igw"
-  }
-}
+#   tags = {
+#     Name = "main-igw"
+#   }
+# }
 
 
-resource "aws_route_table" "main" {
-  vpc_id = aws_vpc.main.id
+# resource "aws_route_table" "main" {
+#   vpc_id = aws_vpc.main.id
 
-  tags = {
-    Name = "main-rt"
-  }
-}
+#   tags = {
+#     Name = "main-rt"
+#   }
+# }
 
-resource "aws_route" "default_route" {
-  route_table_id         = aws_route_table.main.id
-  destination_cidr_block = "0.0.0.0/0"
-  gateway_id             = aws_internet_gateway.main.id
-}
+# resource "aws_route" "default_route" {
+#   route_table_id         = aws_route_table.main.id
+#   destination_cidr_block = "0.0.0.0/0"
+#   gateway_id             = aws_internet_gateway.main.id
+# }
 
 
 # resource "aws_route_table_association" "main" {
